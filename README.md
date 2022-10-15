@@ -54,6 +54,6 @@ The last step is adding references to package repository to pom.xml file.
 <dependency>
   <groupId>de.scriptsdk</groupId>
   <artifactId>core</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
 </dependency>
 ```
