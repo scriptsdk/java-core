@@ -1,6 +1,8 @@
 ## Summary
 
-ScriptSDK.Core offers a rudimentary implementation of external api communication between a java and stealth client.
+Stealth Client is an alternative Ultima Online client written in Delphi and distributed on their [website](https://stealth.od.ua/ "website"). Stealth exposes a socket based external api wwhich is subject of this project.
+
+ScriptSDK.Core is a rudimentary implementation of external api communication between a java and stealth client. Since its a core package it only offers very basical models for developers to communicate to Stealth Client.
 
 ## Features
 
@@ -9,9 +11,15 @@ ScriptSDK.Core offers a rudimentary implementation of external api communication
 
 ## Installation
 
-### 🛠 Use as Dependency
+### 🛠 Use source code
 
-Add Settings.xml for Github authentication to repository
+Developers can fork this repository and use it as it is for their own forks or implementations. Even thought its possible to directly use the sourcecode as base, its recommned to implement this project as maven package.
+
+### 📦 Use as maven package
+
+In order to use Github maven repositories, developers must be registered at github and being able to create a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token "personal access token").
+
+As next step the personal access token must be usable through local maven repository by adding a **Settings.xml** to local .m2 folder. This is regulary located at **C:\Users\USER\.m2\**
 
 ```xml
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -26,7 +34,7 @@ Add Settings.xml for Github authentication to repository
 </settings>
 ```
 
-Add maven package registry to pom.xml.
+The last step is adding references to package repository to pom.xml file.
 
 ```xml
     <repositories>
@@ -40,7 +48,7 @@ Add maven package registry to pom.xml.
     </repositories>
 ```
 
-Add dependency to pom.xml file.
+
 
 ```xml
 <dependency>
