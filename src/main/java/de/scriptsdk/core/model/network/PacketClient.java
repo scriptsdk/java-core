@@ -236,12 +236,12 @@ public final class PacketClient {
 
             PacketReader reader = new PacketReader(packet);
             PacketType type = Enumerable.valueOf(reader.readWord(), PacketType.class);
-            int nextSequence = reader.readWord();
-
-            log.info(String.format("Packet response type is %s", type.name()));
 
             switch (type) {
                 case RETURN_VALUE -> {
+                    int nextSequence = reader.readWord();
+
+                    log.info(String.format("Packet response type is %s", type.name()));
                     PacketResponse response = new PacketResponse(new PacketReader(reader.readBytes()), size, type, nextSequence);
                     handleResponse(response);
                 }
@@ -249,8 +249,10 @@ public final class PacketClient {
                 case PAUSE_RESUME_SCRIPT -> handleStateChange();
                 case EXEC_EVENT_PROC -> handleEvent(new PacketReader(reader.readBytes()));
                 case ERROR_REPORT -> handleError();
-                default ->
-                        throw new PacketClientException(String.format("Unexpected type of transaction %d", nextSequence));
+                default -> {
+                    int nextSequence = reader.readWord();
+                    throw new PacketClientException(String.format("Unexpected type of transaction %d", nextSequence));
+                }
             }
         }
     }
