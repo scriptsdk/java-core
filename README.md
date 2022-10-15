@@ -4,6 +4,12 @@ Stealth Client is an alternative Ultima Online client written in Delphi and dist
 
 ScriptSDK.Core is a rudimentary implementation of external api communication between a java and stealth client. Since its a core package it only offers very basical models for developers to communicate to Stealth Client.
 
+### Requirements
+
+- [Lombok](https://projectlombok.org/ "Lombok")
+
+- [OpenJDK 17](https://adoptium.net/ "OpenJDK 17") 
+
 ## Features
 
 - Implementation of SocketClient for socket communication
