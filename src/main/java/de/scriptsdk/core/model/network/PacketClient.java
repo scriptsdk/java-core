@@ -44,6 +44,10 @@ public final class PacketClient {
         onEventAction = null;
     }
 
+    public Integer getPort() {
+        return port;
+    }
+
     public PacketReaderAction getOnEventAction() {
         return onEventAction;
     }
@@ -147,6 +151,7 @@ public final class PacketClient {
     public void send(PacketType type, PacketWriter writer) {
         int nextSequence = internalWrite(type, writer);
         removeSequenceFromQueue(nextSequence);
+        synchronizePacketsInReaderQueue();
     }
 
     public void send(PacketType type) {
