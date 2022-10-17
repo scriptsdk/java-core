@@ -198,6 +198,13 @@ public final class PacketClient {
         return true;
     }
 
+    public Boolean disconnect() {
+        if (client.isConnected()) {
+            return client.disconnect();
+        }
+        return true;
+    }
+
     private void validateClient() {
         if (this.port == 0) {
             throw new PacketClientException("Client cannot communicate to port 0!");
