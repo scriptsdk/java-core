@@ -4,6 +4,10 @@ package de.scriptsdk.core.model.packet;
 import de.scriptsdk.core.enums.network.PacketType;
 import de.scriptsdk.core.model.io.PacketReader;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public final class PacketResponse {
     private final Integer totalSize;
     private final Integer sequence;

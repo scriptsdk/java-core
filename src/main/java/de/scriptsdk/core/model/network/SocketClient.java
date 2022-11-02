@@ -12,6 +12,10 @@ import java.net.Socket;
 import java.util.HexFormat;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Slf4j
 public final class SocketClient {
     private final int port;

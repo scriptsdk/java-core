@@ -5,6 +5,10 @@ import de.scriptsdk.core.interfaces.Enumerable;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum DataType implements Enumerable {
     SMALL_INTEGER(0, 1, Integer.class),
     BYTE(1, 1, Byte.class),
@@ -31,7 +35,7 @@ public enum DataType implements Enumerable {
     public int getSize() {
         return size;
     }
-
+    
     public Class<?> getConverterClass() {
         return converterClass;
     }

@@ -7,6 +7,10 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class DelphiDateTimeMapper {
 
     private final LocalDateTime dateTime;

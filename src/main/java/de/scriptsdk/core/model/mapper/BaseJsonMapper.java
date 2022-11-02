@@ -8,6 +8,10 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public final class BaseJsonMapper extends ObjectMapper {
 
     public BaseJsonMapper() {

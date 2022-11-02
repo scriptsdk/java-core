@@ -3,6 +3,10 @@ package de.scriptsdk.core.model.packet;
 import de.scriptsdk.core.enums.network.PacketType;
 import de.scriptsdk.core.model.io.PacketWriter;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public final class PacketRequest {
     private final PacketType type;
     private final Integer sequence;

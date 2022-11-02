@@ -2,6 +2,10 @@ package de.scriptsdk.core.enums.network;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.1
+ */
 public enum PacketType implements Enumerable {
     ZERO(0),
     RETURN_VALUE(1),
@@ -396,6 +400,10 @@ public enum PacketType implements Enumerable {
     SET_SCRIPT_NAME(457),
     GET_SCRIPT_NAME(458),
     GET_SCRIPT_PARAMS(459),
+    /**
+     * @since Version 1.1
+     */
+    GET_SCRIPT_LIST(460),
     GET_SHOW_IPC_EXCEPTION_WINDOW(470),
     SET_SHOW_IPC_EXCEPTION_WINDOW(471),
     MESSENGER_GET_CONNECTED(501),

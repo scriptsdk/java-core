@@ -19,6 +19,10 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Slf4j
 public final class PacketClient {
     private final Integer port;
@@ -83,9 +87,9 @@ public final class PacketClient {
                 writer.writeSmallInteger(190);
                 writer.writeSmallInteger(173);
                 writer.writeSmallInteger(222);
-
-
-                tempClient.write(writer.getStream());
+                if (Objects.equals(tempClient.write(writer.getStream()), false)) {
+                    throw new PacketClientException("Error on writing packet!");
+                }
 
                 while (tempClient.canRead() < 4) {
                     tempClient.sleep(20);
@@ -172,7 +176,9 @@ public final class PacketClient {
 
             byte[] bytes = request.generatePacket();
 
-            client.write(bytes);
+            if (Objects.equals(client.write(bytes), false)) {
+                throw new PacketClientException("Error on writing packet!");
+            }
 
             log.info(String.format("Sending Transaction-ID: %d", nextSequence));
 

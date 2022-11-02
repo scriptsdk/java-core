@@ -18,6 +18,10 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class PacketReader {
     private final ByteArrayInputStream stream;
 

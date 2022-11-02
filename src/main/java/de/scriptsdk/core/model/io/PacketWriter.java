@@ -17,6 +17,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class PacketWriter {
     final ByteArrayOutputStream stream;
 

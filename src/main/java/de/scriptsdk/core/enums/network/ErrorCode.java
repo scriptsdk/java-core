@@ -2,6 +2,10 @@ package de.scriptsdk.core.enums.network;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum ErrorCode implements Enumerable {
     PACKET_SIZE_TOO_SMALL(0, "Packet size is not correct!"),
     UNFINISHED_PACKET(1, "Packet has not been finished!"),

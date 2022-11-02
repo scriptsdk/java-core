@@ -1,5 +1,9 @@
 package de.scriptsdk.core.exceptions;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class BaseException extends RuntimeException {
 
     public BaseException(String format, Object... args) {

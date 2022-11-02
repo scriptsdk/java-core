@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class BaseList<T> extends ArrayList<T> {
     public BaseList() {
         super();
